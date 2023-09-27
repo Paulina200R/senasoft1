@@ -89,9 +89,15 @@ h1{
 }
 
 /* Contenedores ventanas emergentes */
+.create-usuario,
+.create-usuario,
+.delete-usuario,
+.edit-usuario,
+.edit2-usuario,
 .create-manz,
 .delete-manz,
 .edit-manz,
+.edit2-manz,
 .edit2-est,
 .create-est,
 .delete-est,
@@ -111,8 +117,10 @@ h1{
     visibility: hidden;
 }
 
-
-
+.edit2-usuario,
+.create-usuario,
+.delete-usuario,
+.edit-usuario,
 .edit2-manz,
 .create-manz,
 .delete-manz,

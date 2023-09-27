@@ -20,56 +20,57 @@
             <div class="icon"><img src="img/colombia.png" alt=""></div>
             <p>Municipios</p>
             <div class="botones"><br>
-                <a class="create" href="">Registrar</a>
-                <a class="edit" href="">Editar</a>
-                <a class="delete" href="">Eliminar</a>
+                <a id="btn-create-mun" class="create" href="">Registrar</a>
+                <a id="btn-edit-mun" class="edit" href="">Editar</a>
+                <a id="btn-delete-mun" class="delete" href="">Eliminar</a>
             </div>
         </div>
         <div class="opciones">
             <div class="icon"><img src="img/categoria.png" alt=""></div>
             <p>Categorías</p>
             <div class="botones"><br>
-                <a class="create" href="">Registrar</a>
-                <a class="edit" href="">Editar</a>
-                <a class="delete" href="">Eliminar</a>
+                <a id="btn-create-cat" class="create" href="">Registrar</a>
+                <a id="btn-edit-cat" class="edit" href="">Editar</a>
+                <a id="btn-delete-cat" class="delete" href="">Eliminar</a>
             </div>
         </div>
         <div class="opciones">
             <div class="icon"><img src="img/apoyo-tecnico.png" alt=""></div>
             <p>Servicios</p>
             <div class="botones"><br>
-                <a class="create" href="">Registrar</a>
-                <a class="edit" href="">Editar</a>
-                <a class="delete" href="">Eliminar</a>
+                <a id="btn-create-ser" class="create" href="">Registrar</a>
+                <a id="btn-edit-ser" class="edit" href="">Editar</a>
+                <a id="btn-delete-ser" class="delete" href="">Eliminar</a>
             </div>
         </div>
         <div class="opciones">
             <div class="icon"><img src="img/usuario.png" alt=""></div>
             <p>Usuarios</p>
             <div class="botones"><br>
-                <a class="create" href="">Registrar</a>
-                <a class="edit" href="">Editar</a>
-                <a class="delete" href="">Eliminar</a>
+                <a id="btn-create-usuario" class="create" href="">Registrar</a>
+                <a id="btn-edit-usuario" class="edit" href="">Editar</a>
+                <a id="btn-delete-usuario" class="delete" href="">Eliminar</a>
             </div>
         </div>
         <div class="opciones">
             <div class="icon"><img src="img/manzana.png" alt=""></div>
             <p>Manzanas</p>
             <div class="botones"><br>
-                <a class="create" href="">Registrar</a>
-                <a class="edit" href="">Editar</a>
-                <a class="delete" href="">Eliminar</a>
+                <a id="btn-create-manz" class="create" href="">Registrar</a>
+                <a id="btn-edit-manz" class="edit" href="">Editar</a>
+                <a id="btn-delete-manz" class="delete" href="">Eliminar</a>
             </div>
         </div>
         <div class="opciones">
             <div class="icon"><img src="img/mapa.png" alt=""></div>
             <p>Establecimientos</p>
             <div class="botones"><br>
-                <a class="create" href="">Registrar</a>
-                <a class="edit" href="">Editar</a>
-                <a class="delete" href="">Eliminar</a>
+                <a id="btn-create-est" class="create" href="">Registrar</a>
+                <a id="btn-edit-est" class="edit" href="">Editar</a>
+                <a id="btn-delete-est" class="delete" href="">Eliminar</a>
             </div>
         </div>
+
         <!-- Registro municipio -->
     <div class="create-mun">
         <form class="form-create" action="" method="post">
@@ -91,7 +92,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreMunicipio" placeholder="Ingrese el nuevo nombre del Municipio"><br>
-            <br><input class="btn-edit" type="submit" value="Guardar">
+            <br><input id="btn-edit2-mun" class="btn-edit" type="submit" value="Guardar">
         </form>
     </div>
     <!-- Eliminar municipio -->
@@ -99,6 +100,39 @@
         <form class="form-delete" action="" method="put">
             <h1>Eliminar</h1>
             <input class="nombre" type="text" name="nombreMunicipio" placeholder="Ingrese el nombre del Municipio"><br>
+            <br><input class="btn-delete" type="submit" value="Eliminar">
+        </form>
+    </div>
+
+        <!-- Registro usuario -->
+    <div class="create-usuario">
+        <form class="form-create" action="" method="post">
+            <h1>Registrar</h1>
+            <input class="nombre" type="text" name="nombreUsuario" placeholder="Ingrese el nombre del Usuario"><br>
+            <br><input class="btn-create" type="submit" value="Registrar">
+        </form>
+    </div>
+    <!-- Busqueda para editar usuario -->
+    <div class="edit-usuario">
+        <form class="form-edit" action="" method="put">
+            <h1>Editar</h1>
+            <input class="nombre" type="text" name="nombreUsuario" placeholder="Ingrese el nombre del Usuario"><br>
+            <br><input class="btn-edit" type="submit" value="Buscar">
+        </form>
+    </div>
+    <!-- Editar usuario -->
+    <div class="edit2-usuario">
+        <form class="form-edit" action="" method="put">
+            <h1>Editar</h1>
+            <input class="nombre" type="text" name="nombreUsuario" placeholder="Ingrese el nuevo nombre del Usuario"><br>
+            <br><input id="btn-edit2-usuario" class="btn-edit" type="submit" value="Guardar">
+        </form>
+    </div>
+    <!-- Eliminar usuario -->
+    <div class="delete-usuario">
+        <form class="form-delete" action="" method="put">
+            <h1>Eliminar</h1>
+            <input class="nombre" type="text" name="nombreUsuario" placeholder="Ingrese el nombre del Usuario"><br>
             <br><input class="btn-delete" type="submit" value="Eliminar">
         </form>
     </div>
@@ -124,7 +158,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreServicio" placeholder="Ingrese el nuevo nombre del Servicio"><br>
-            <br><input class="btn-edit" type="submit" value="Guardar">
+            <br><input id="btn-edit2-ser" class="btn-edit" type="submit" value="Guardar">
         </form>
     </div>
     <!-- Eliminar servicio -->
@@ -157,7 +191,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreCategoria" placeholder="Ingrese el nuevo nombre de la Categoría"><br>
-            <br><input class="btn-edit" type="submit" value="Guardar">
+            <br><input id="btn-edit2-cat" class="btn-edit" type="submit" value="Guardar">
         </form>
     </div>
     <!-- Eliminar categoria -->
@@ -190,7 +224,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreEstablecimiento" placeholder="Ingrese el nuevo nombre del Establecimiento"><br>
-            <br><input class="btn-edit" type="submit" value="Guardar">
+            <br><input id="btn-edit2-est" class="btn-edit" type="submit" value="Guardar">
         </form>
     </div>
     <!-- Eliminar establecimiento -->
@@ -223,7 +257,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreManzana" placeholder="Ingrese el nuevo nombre de la Manzana"><br>
-            <br><input class="btn-edit" type="submit" value="Guardar">
+            <br><input id="btn-edit2-manz" class="btn-edit" type="submit" value="Guardar">
         </form>
     </div>
     <!-- Eliminar manzana -->
@@ -235,5 +269,6 @@
         </form>
     </div>
     </section>
+    <script src="js/funcionMenuAdmin.js"></script>
 </body>
 </html>

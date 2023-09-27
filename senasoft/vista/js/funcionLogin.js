@@ -1,15 +1,15 @@
-let divLog = document.querySelector(".login"); 
-let divSign = document.querySelector(".registro"); 
+let divLog = document.getElementById("login"); 
+let divSign = document.getElementById("registro");
 
 document.getElementById("change-login").addEventListener("click", mostrarLog);
 document.getElementById("change-signUp").addEventListener("click", mostrarReg);
 
 function mostrarLog(){
-    divLog.style.visibility="visible";
     divSign.style.visibility="hidden";
+    divLog.style.visibility="visible";
 }
 
 function mostrarReg(){
-    divLog.style.visibility="hidden";
     divSign.style.visibility="visible";
+    divLog.style.visibility="hidden";
 }

@@ -1,0 +1,102 @@
+<?php
+require_once '../modelo/respuestas.class.php';
+require_once '../modelo/usuario.class.php';
+
+$_respuestas = new respuestas;
+$_usuario = new usuario;
+
+//metodo get buscar todo o por codigo
+if($_SERVER['REQUEST_METHOD'] == "GET"){
+
+    if(isset($_GET["page"])){
+        $pagina = $_GET["page"];
+        $listaUsuarios = $_Usuario->listaUsuarios($pagina);
+        header("Content-Type: application/json");
+        echo json_encode($listaUsuarios);
+        http_response_code(200);
+    }else{  
+    if(isset($_GET['idUsuario'])){
+        $idproducto = $_GET['idUsuario'];
+        $datosProducto= $_Usuarios->obtenerUsuarios($idUsuario);
+        header("Content-Type: application/json");
+        echo json_encode($datosProducto);
+        http_response_code(200);
+    }
+    }
+}
+// metodo post para guardar 
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    //$postBody = $_POST["texto2"];
+    $postBody = array(  
+        "texto1" => 0,
+        "texto2" =>  $_POST["texto2"]
+    );
+    //recibimos los datos enviados
+    //$postBody = file_get_contents("php://input");
+    //enviamos los datos al controlador
+    $datosArray = $_productos->post($postBody);
+    //delvovemos una respuesta 
+     header('Content-Type: application/json');
+     if(isset($datosArray["result"]["error_id"])){
+         $responseCode = $datosArray["result"]["error_id"];
+         http_response_code($responseCode);
+     }else{
+         http_response_code(200);
+     }
+     echo json_encode($datosArray);
+    
+}
+
+if($_SERVER['REQUEST_METHOD'] == "PUT"){
+      //recibimos los datos enviados
+      $postBody = file_get_contents("php://input");
+      //enviamos datos al manejador
+      $datosArray = $_pacientes->put($postBody);
+        //delvovemos una respuesta 
+     header('Content-Type: application/json');
+     if(isset($datosArray["result"]["error_id"])){
+         $responseCode = $datosArray["result"]["error_id"];
+         http_response_code($responseCode);
+     }else{
+         http_response_code(200);
+     }
+     echo json_encode($datosArray);
+
+}
+
+if($_SERVER['REQUEST_METHOD'] == "DELETE"){
+
+        $headers = getallheaders();
+        if(isset($headers["token"]) && isset($headers["pacienteId"])){
+            //recibimos los datos enviados por el header
+            $send = [
+                "token" => $headers["token"],
+                "pacienteId" =>$headers["pacienteId"]
+            ];
+            $postBody = json_encode($send);
+        }else{
+            //recibimos los datos enviados
+            $postBody = file_get_contents("php://input");
+        }
+        
+        //enviamos datos al manejador
+        $datosArray = $_pacientes->delete($postBody);
+        //delvovemos una respuesta 
+        header('Content-Type: application/json');
+        if(isset($datosArray["result"]["error_id"])){
+            $responseCode = $datosArray["result"]["error_id"];
+            http_response_code($responseCode);
+        }else{
+            http_response_code(200);
+        }
+        echo json_encode($datosArray);
+       
+
+}/*else{
+    header('Content-Type: application/json');
+    $datosArray = $_respuestas->error_405();
+    echo json_encode($datosArray);
+} */
+
+
+?>
