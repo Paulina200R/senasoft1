@@ -26,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $error_message = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     }
 }else if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $tipoDocumento = $_POST["texto1"];
-    $documento = $_POST["texto2"];
+    $tipoDocumento = $_POST["texto11"];
+    $documento = $_POST["texto12"];
     $nombres = $_POST["texto3"];
     $apellidos = $_POST["texto4"];
     $telefono = $_POST["texto5"];
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $ocupacion = $_POST["texto10"];
 
     $api_url = 'http://localhost/Antioquia-CentrodelDisenoyManufacturadelCuero/apisenasoft/controlador/usuario.php';
-    $data = array('texto1' => $tipoDocumento, 'texto2' => $documento,'texto3' => $nombres, 'texto4' => $apellidos,'texto5' => $telefono, 'texto6' => $correo,'texto7' => $contrasena, 'texto8' => $ciudad,'texto9' => $direccion, 'texto10' => $ocupacion);
+    $data = array('texto11' => $tipoDocumento, 'texto12' => $documento,'texto3' => $nombres, 'texto4' => $apellidos,'texto5' => $telefono, 'texto6' => $correo,'texto7' => $contrasena, 'texto8' => $ciudad,'texto9' => $direccion, 'texto10' => $ocupacion);
 
     $ch = curl_init($api_url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -95,19 +95,16 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         <br><input type="password" name="texto2" class="inputs in-log" id="ipt-contra" placeholder="Ingrese su contrasena" required>
                         <a class="btn-password" href="">¿Olvidaste tu contraseña?</a><br>
                         <br><input class="btn-ing" type="submit" value="Ingresar" id="btn-ing">
+                        <p class="account-login">¿Aún no tienes una cuenta?<button id="change-signUp" class="btn-signup">Registrarse</button></p>
                     </form>
-                    <p class="account-login">¿Aún no tienes una cuenta?<button id="change-signUp" class="btn-signup">Registrarse</button></p>
                 </div>
                 <div id="registro" class="registro">
                     <form class="form-registro" action="http://localhost/Antioquia-CentrodelDisenoyManufacturadelCuero/apisenasoft/controlador/usuario.php" method="post">
                         <h1>Registrarse</h1>
                         <div class="reg1">
-                            <br><input type="text" name="texto1" class="inputs in-reg" id="ipt-nom" placeholder="Ingrese sus nombres" required><br>
-                            <br><input type="text" name="texto2" class="inputs in-reg" id="ipt-ape" placeholder="Ingrese sus apellidos" required><br>
-                            <br><select class="sel-doc" name="texto3" id="">
-                                <option class="opt-doc" value="1">Cedula de Ciudadania</option>
-                                <option class="opt-doc" value="2">Tarjate de Identidad</option>
-                            </select><br>
+                            <br><input type="text" name="texto11" class="inputs in-reg" id="ipt-nom" placeholder="Ingrese sus nombres" required><br>
+                            <br><input type="text" name="texto12" class="inputs in-reg" id="ipt-ape" placeholder="Ingrese sus apellidos" required><br>
+                            <br><input type="text" name="texto3" class="inputs in-reg" id="ipt-doc" placeholder="Ingrese su tipo de documento" required><br>
                             <br><input type="text" name="texto4" class="inputs in-reg" id="ipt-doc" placeholder="Ingrese su documento" required><br>
                             <br><input type="text" name="texto5" class="inputs in-reg" id="ipt-tel" placeholder="Ingrese su teléfono" required><br>
                             <br><input type="text" name="texto6" class="inputs in-reg" id= "ipt-ciu" placeholder="Ingrese su ciudad" required><br>
@@ -118,9 +115,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             <br><input type="text" name="texto9" class="inputs in-reg" id="ipt-correo" placeholder="Ingrese su correo" required><br>
                             <br><input type="password" name="texto10" class="inputs in-reg" id="ipt-contra" placeholder="Ingrese su contrasena" required><br>
                             <br><input class="btn-reg" type="submit" value="Registrarse" id="btn-reg">
+                        <p class="account-signup">¿Ya tienes una cuenta?<button id="change-login" class="btn-login">Iniciar Sesión</button></p>
                         </div>
                     </form>
-                    <p class="account-signup">¿Ya tienes una cuenta?<button id="change-login" class="btn-login">Iniciar Sesión</button></p>
                 </div>
             </div>
         </div>

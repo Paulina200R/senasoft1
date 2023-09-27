@@ -67,6 +67,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: hidden;
     transition: all 0.5s ease;
 }
 
@@ -142,6 +143,14 @@ h1{
     transition: all 0.5s ease;
 }
 
+.btn-login,
+.btn-signup{
+    background-color: rgb(0,0,0,0);
+    border: none;
+    color: #F4E5E4;
+    text-decoration: underline;
+}
+
 .btn-password{
     font-size: 13px;
     margin-left: 53%;
@@ -178,7 +187,7 @@ h1{
 }
 
 .account-signup{
-    margin-left: 10%;
+    margin-left: 7%;
 }
 
 .account-signup:hover{
@@ -227,13 +236,13 @@ option{
 /* Orden de inputs en registro */
 
 .reg1{
-    width: 40%;
+    width: 43%;
     height: 300px;
     margin-left: -50%;
 }
 
 .reg2{
-    width: 40%;
+    width: 43%;
     height: 300px;
     position: absolute;
     margin-left: 40%;

@@ -26,15 +26,20 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
 }
 // metodo post para guardar 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-    //$postBody = $_POST["texto2"];
-    $postBody = array(  
-        "texto1" => 0,
-        "texto2" =>  $_POST["texto2"]
-    );
-    //recibimos los datos enviados
-    //$postBody = file_get_contents("php://input");
+    $postBody = json_encode(array(  
+        "texto11" => $_POST["texto11"],
+        "texto12" =>  $_POST["texto12"],
+        "texto3" => $_POST["texto3"],
+        "texto4" =>  $_POST["texto4"],
+        "texto5" => $_POST["texto5"],
+        "texto6" =>  $_POST["texto6"],
+        "texto7" => $_POST["texto7"],
+        "texto8" =>  $_POST["texto8"],
+        "texto9" => $_POST["texto9"],
+        "texto10" =>  $_POST["texto10"]
+    ));
     //enviamos los datos al controlador
-    $datosArray = $_productos->post($postBody);
+    $datosArray = $_usuario->post($postBody);
     //delvovemos una respuesta 
      header('Content-Type: application/json');
      if(isset($datosArray["result"]["error_id"])){
@@ -43,7 +48,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
      }else{
          http_response_code(200);
      }
-     echo json_encode($datosArray);
     
 }
 

@@ -13,6 +13,7 @@ class usuario extends conexion {
     private $apellidos = "";
     private $telefono = "";
     private $correo = "";
+    private $contrasena = "";
     private $ciudad = "";
     private $direccion = "";
     private $ocupacion = "";
@@ -121,20 +122,26 @@ class usuario extends conexion {
           //  $arrayToken =   $this->buscarToken();
             //if($arrayToken){
 
-                if(!isset($datos['texto1']) || !isset($datos['texto2'])){
+                if(!isset($datos['texto11']) || !isset($datos['texto12']) || !isset($datos['texto3']) || !isset($datos['texto4']) || !isset($datos['texto5']) || !isset($datos['texto6']) || !isset($datos['texto7']) || !isset($datos['texto8']) || !isset($datos['texto9']) || !isset($datos['texto10'])){
                     return $_respuestas->error_400();
                 }else{
-                    $this->idUsuario = 0;
-                    $this->Usuario = $datos['texto2']; // se trae los datos de la vista Usuario
+                    // se trae los datos de la vista Usuario
+                    $this->nombres = $datos['texto11'];
+                    $this->apellidos = $datos['texto12'];
+                    $this->tipoDocumento = $datos['texto3'];
+                    $this->documento = $datos['texto4'];
+                    $this->telefono = $datos['texto5'];
+                    $this->ciudad = $datos['texto6'];
+                    $this->direccion = $datos['texto7'];
+                    $this->ocupacion = $datos['texto8'];
+                    $this->correo = $datos['texto9'];
+                    $this->contrasena = $datos['texto10'];
                      $resp = $this->insertarUsuario();
 
                      
                     if($resp){
-                        $respuesta = $_respuestas->response;
-                        $respuesta["result"] = array(
-                            "texto2" => $resp
-                        );
-                        return $respuesta;
+                        header('Location: ../../senasoft/vista/login.php');
+                        exit();
                     }else{
                         return $_respuestas->error_500();
                     }
@@ -152,9 +159,9 @@ class usuario extends conexion {
 
 
     private function insertarUsuario(){
-        $query = "INSERT INTO " . $this->table . " (idUsuario, tipoDocumento, documento, nombres, apellidos, telefono, correo, ciudad, direccion, ocupacion, rol, estado)
+        $query = "INSERT INTO " . $this->table . " (idUsuario, tipoDocumento, documento, nombres, apellidos, telefono, correo, contrasena, ciudad, direccion, ocupacion, rol, estado)
         values
-        ('" . $this->idUsuario . "','" . $this->tipoDocumento . "','" . $this->documento . "','" . $this->nombres . "','" . $this->apellidos . "','" . $this->telefono . "','" . $this->correo . "','" . $this->ciudad . "','" . $this->direccion . "','" . $this->ocupacion . "','" . $this->rol . "','" . $this->estado . "')"; 
+        ('" . $this->idUsuario . "','" . $this->tipoDocumento . "','" . $this->documento . "','" . $this->nombres . "','" . $this->apellidos . "','" . $this->telefono . "','" . $this->correo . "','" . $this->contrasena . "','" . $this->ciudad . "','" . $this->direccion . "','" . $this->ocupacion . "','" . $this->rol . "','" . $this->estado . "')"; 
         $resp = parent::nonQueryId($query);
         if($resp){
              return $resp;
