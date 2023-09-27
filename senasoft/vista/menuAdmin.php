@@ -76,7 +76,7 @@
         <form class="form-create" action="" method="post">
             <h1>Registrar</h1>
             <input class="nombre" type="text" name="nombreMunicipio" placeholder="Ingrese el nombre del Municipio"><br>
-            <br><input class="btn-create" type="submit" value="Registrar">
+            <br><button class="btn-create">Registrar</button>
         </form>
     </div>
     <!-- Busqueda para editar municipio -->
@@ -84,7 +84,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreMunicipio" placeholder="Ingrese el nombre del Municipio"><br>
-            <br><input class="btn-edit" type="submit" value="Buscar">
+            <br><button class="btn-edit">Buscar</button>
         </form>
     </div>
     <!-- Editar municipio -->
@@ -92,7 +92,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreMunicipio" placeholder="Ingrese el nuevo nombre del Municipio"><br>
-            <br><input id="btn-edit2-mun" class="btn-edit" type="submit" value="Guardar">
+            <br><button id="btn-edit2-mun" class="btn-edit">Guardar</button>
         </form>
     </div>
     <!-- Eliminar municipio -->
@@ -100,7 +100,7 @@
         <form class="form-delete" action="" method="put">
             <h1>Eliminar</h1>
             <input class="nombre" type="text" name="nombreMunicipio" placeholder="Ingrese el nombre del Municipio"><br>
-            <br><input class="btn-delete" type="submit" value="Eliminar">
+            <br><button class="btn-delete">Eliminar</button>
         </form>
     </div>
 
@@ -109,7 +109,7 @@
         <form class="form-create" action="" method="post">
             <h1>Registrar</h1>
             <input class="nombre" type="text" name="nombreUsuario" placeholder="Ingrese el nombre del Usuario"><br>
-            <br><input class="btn-create" type="submit" value="Registrar">
+            <br><button class="btn-create">Registrar</button>
         </form>
     </div>
     <!-- Busqueda para editar usuario -->
@@ -117,7 +117,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreUsuario" placeholder="Ingrese el nombre del Usuario"><br>
-            <br><input class="btn-edit" type="submit" value="Buscar">
+            <br><button class="btn-edit">Buscar</button>
         </form>
     </div>
     <!-- Editar usuario -->
@@ -125,7 +125,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreUsuario" placeholder="Ingrese el nuevo nombre del Usuario"><br>
-            <br><input id="btn-edit2-usuario" class="btn-edit" type="submit" value="Guardar">
+            <br><button id="btn-edit2-usuario" class="btn-edit">Guardar</button>
         </form>
     </div>
     <!-- Eliminar usuario -->
@@ -133,7 +133,7 @@
         <form class="form-delete" action="" method="put">
             <h1>Eliminar</h1>
             <input class="nombre" type="text" name="nombreUsuario" placeholder="Ingrese el nombre del Usuario"><br>
-            <br><input class="btn-delete" type="submit" value="Eliminar">
+            <br><button class="btn-delete">Eliminar</button>
         </form>
     </div>
 
@@ -142,7 +142,7 @@
         <form class="form-create" action="" method="post">
             <h1>Registrar</h1>
             <input class="nombre" type="text" name="nombreServicio" placeholder="Ingrese el nombre del Servicio"><br>
-            <br><input class="btn-create" type="submit" value="Registrar">
+            <br><button class="btn-create">Registrar</button>
         </form>
     </div>
     <!-- Busqueda para editar servicio -->
@@ -150,7 +150,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreServicio" placeholder="Ingrese el nombre del Servicio"><br>
-            <br><input class="btn-edit" type="submit" value="Buscar">
+            <br><button class="btn-edit">Buscar</button>
         </form>
     </div>
     <!-- Editar servicio -->
@@ -158,7 +158,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreServicio" placeholder="Ingrese el nuevo nombre del Servicio"><br>
-            <br><input id="btn-edit2-ser" class="btn-edit" type="submit" value="Guardar">
+            <br><button id="btn-edit2-ser" class="btn-edit">Guardar</button>
         </form>
     </div>
     <!-- Eliminar servicio -->
@@ -166,7 +166,7 @@
         <form class="form-delete" action="" method="put">
             <h1>Eliminar</h1>
             <input class="nombre" type="text" name="nombreServicio" placeholder="Ingrese el nombre del Servicio"><br>
-            <br><input class="btn-delete" type="submit" value="Eliminar">
+            <br><button class="btn-delete">Eliminar</button>
         </form>
     </div>
 
@@ -175,7 +175,7 @@
         <form class="form-create" action="" method="post">
             <h1>Registrar</h1>
             <input class="nombre" type="text" name="nombreCategoria" placeholder="Ingrese el nombre de la Categoría"><br>
-            <br><input class="btn-create" type="submit" value="Registrar">
+            <br><button class="btn-create">Registrar</button>
         </form>
     </div>
     <!-- Busqueda para editar categoria -->
@@ -183,7 +183,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreCategoria" placeholder="Ingrese el nombre de la Categoría"><br>
-            <br><input class="btn-edit" type="submit" value="Buscar">
+            <br><button class="btn-edit">Buscar</button>
         </form>
     </div>
     <!-- Editar categoria -->
@@ -191,7 +191,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreCategoria" placeholder="Ingrese el nuevo nombre de la Categoría"><br>
-            <br><input id="btn-edit2-cat" class="btn-edit" type="submit" value="Guardar">
+            <br><button id="btn-edit2-cat" class="btn-edit">Guardar</button>
         </form>
     </div>
     <!-- Eliminar categoria -->
@@ -199,7 +199,7 @@
         <form class="form-delete" action="" method="put">
             <h1>Eliminar</h1>
             <input class="nombre" type="text" name="nombreCategoria" placeholder="Ingrese el nombre de la Categoría"><br>
-            <br><input class="btn-delete" type="submit" value="Eliminar">
+            <br><button class="btn-delete">Eliminar</button>
         </form>
     </div>
 
@@ -208,7 +208,7 @@
         <form class="form-create" action="" method="post">
             <h1>Registrar</h1>
             <input class="nombre" type="text" name="nombreEstablecimiento" placeholder="Ingrese el nombre del Establecimiento"><br>
-            <br><input class="btn-create" type="submit" value="Registrar">
+            <br><button class="btn-create">Registrar</button>
         </form>
     </div>
     <!-- Busqueda para editar establecimiento -->
@@ -216,7 +216,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreEstablecimiento" placeholder="Ingrese el nombre del Establecimiento"><br>
-            <br><input class="btn-edit" type="submit" value="Buscar">
+            <br><button class="btn-edit">Buscar</button>
         </form>
     </div>
     <!-- Editar establecimiento -->
@@ -224,7 +224,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreEstablecimiento" placeholder="Ingrese el nuevo nombre del Establecimiento"><br>
-            <br><input id="btn-edit2-est" class="btn-edit" type="submit" value="Guardar">
+            <br><button id="btn-edit2-est" class="btn-edit">Guardar</button>
         </form>
     </div>
     <!-- Eliminar establecimiento -->
@@ -232,7 +232,7 @@
         <form class="form-delete" action="" method="put">
             <h1>Eliminar</h1>
             <input class="nombre" type="text" name="nombreEstablecimiento" placeholder="Ingrese el nombre del Establecimiento"><br>
-            <br><input class="btn-delete" type="submit" value="Eliminar">
+            <br><button class="btn-delete">Eliminar</button>
         </form>
     </div>
 
@@ -241,7 +241,7 @@
         <form class="form-create" action="" method="post">
             <h1>Registrar</h1>
             <input class="nombre" type="text" name="nombreManzana" placeholder="Ingrese el nombre de la Manzana"><br>
-            <br><input class="btn-create" type="submit" value="Registrar">
+            <br><button class="btn-create">Registrar</button>
         </form>
     </div>
     <!-- Busqueda para editar manzana -->
@@ -249,7 +249,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreManzana" placeholder="Ingrese el nombre de la Manzana"><br>
-            <br><input class="btn-edit" type="submit" value="Buscar">
+            <br><button class="btn-edit">Buscar</button>
         </form>
     </div>
     <!-- Editar manzana -->
@@ -257,7 +257,7 @@
         <form class="form-edit" action="" method="put">
             <h1>Editar</h1>
             <input class="nombre" type="text" name="nombreManzana" placeholder="Ingrese el nuevo nombre de la Manzana"><br>
-            <br><input id="btn-edit2-manz" class="btn-edit" type="submit" value="Guardar">
+            <br><button id="btn-edit2-manz" class="btn-edit">Guardar</button>
         </form>
     </div>
     <!-- Eliminar manzana -->
@@ -265,7 +265,7 @@
         <form class="form-delete" action="" method="put">
             <h1>Eliminar</h1>
             <input class="nombre" type="text" name="nombreManzana" placeholder="Ingrese el nombre de la Manzana"><br>
-            <br><input class="btn-delete" type="submit" value="Eliminar">
+            <br><button class="btn-delete">Eliminar</button>
         </form>
     </div>
     </section>
