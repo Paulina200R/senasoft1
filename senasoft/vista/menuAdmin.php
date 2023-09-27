@@ -19,60 +19,60 @@
         <div class="opciones">
             <div class="icon"><img src="img/colombia.png" alt=""></div>
             <p>Municipios</p>
-            <div class="botones"><br>
             <input type="text" class="nombre" placeholder="Ingrese el nombre del municipio">    
-            <br><a id="btn-create-mun" class="create" href="">Registrar</a>
-                <a id="btn-edit-mun" class="edit" href="">Editar</a>
+            <div class="botones"><br>
+            <br><a id="btn-create-mun" class="create" href="opcionesAdmin/registrarMun.php">Registrar</a>
+                <a id="btn-edit-mun" class="edit" href="opcionesAdmin/editarMun.php">Editar</a>
                 <a id="btn-delete-mun" class="delete" href="">Eliminar</a>
             </div>
         </div>
         <div class="opciones">
             <div class="icon"><img src="img/categoria.png" alt=""></div>
             <p>Categorías</p>
-            <div class="botones"><br>
-            <input type="text" class="nombre" placeholder="Ingrese el nombre de la categoría">    
-            <br><a id="btn-create-cat" class="create" href="">Registrar</a>
-                <a id="btn-edit-cat" class="edit" href="">Editar</a>
+            <input type="text" class="nombre" placeholder="Ingrese el nombre de la categoría">
+            <div class="botones"><br>    
+            <br><a id="btn-create-cat" class="create" href="opcionesAdmin/registrarCat.php">Registrar</a>
+                <a id="btn-edit-cat" class="edit" href="opcionesAdmin/editarCat.php">Editar</a>
                 <a id="btn-delete-cat" class="delete" href="">Eliminar</a>
             </div>
         </div>
         <div class="opciones">
             <div class="icon"><img src="img/apoyo-tecnico.png" alt=""></div>
             <p>Servicios</p>
-            <div class="botones"><br>
             <input type="text" class="nombre" placeholder="Ingrese el nombre del servicio">    
-            <br><a id="btn-create-ser" class="create" href="">Registrar</a>
-                <a id="btn-edit-ser" class="edit" href="">Editar</a>
+            <div class="botones"><br>
+            <br><a id="btn-create-ser" class="create" href="opcionesAdmin/registrarSer.php">Registrar</a>
+                <a id="btn-edit-ser" class="edit" href="opcionesAdmin/editarSer.php">Editar</a>
                 <a id="btn-delete-ser" class="delete" href="">Eliminar</a>
             </div>
         </div>
         <div class="opciones">
             <div class="icon"><img src="img/usuario.png" alt=""></div>
             <p>Usuarios</p>
-            <div class="botones"><br>
             <input type="text" class="nombre" placeholder="Ingrese el nombre del usuario">    
-            <br><a id="btn-create-usuario" class="create" href="">Registrar</a>
-                <a id="btn-edit-usuario" class="edit" href="">Editar</a>
+            <div class="botones"><br>
+            <br><a id="btn-create-usuario" class="create" href="opcionesAdmin/registrarUsuario.php">Registrar</a>
+                <a id="btn-edit-usuario" class="edit" href="opcionesAdmin/editarUsuario.php">Editar</a>
                 <a id="btn-delete-usuario" class="delete" href="">Eliminar</a>
             </div>
         </div>
         <div class="opciones">
             <div class="icon"><img src="img/manzana.png" alt=""></div>
             <p>Manzanas</p>
-            <div class="botones"><br>
-            <input type="text" class="nombre" placeholder="Ingrese el nombre de la manzana">    
-            <br><a id="btn-create-manz" class="create" href="">Registrar</a>
-                <a id="btn-edit-manz" class="edit" href="">Editar</a>
+            <input type="text" class="nombre" placeholder="Ingrese el nombre de la manzana">
+            <div class="botones"><br>    
+            <br><a id="btn-create-manz" class="create" href="opcionesAdmin/registrarManz.php">Registrar</a>
+                <a id="btn-edit-manz" class="edit" href="opcionesAdmin/editarManz.php">Editar</a>
                 <a id="btn-delete-manz" class="delete" href="">Eliminar</a>
             </div>
         </div>
         <div class="opciones">
             <div class="icon"><img src="img/mapa.png" alt=""></div>
             <p>Establecimientos</p>
-            <div class="botones"><br>
             <input type="text" class="nombre" placeholder="Ingrese el nombre del establecimiento">    
-            <br><a id="btn-create-est" class="create" href="">Registrar</a>
-                <a id="btn-edit-est" class="edit" href="">Editar</a>
+            <div class="botones"><br>
+            <br><a id="btn-create-est" class="create" href="opcionesAdmin/registrarEst.php">Registrar</a>
+                <a id="btn-edit-est" class="edit" href="opcionesAdmin/editarEst.php">Editar</a>
                 <a id="btn-delete-est" class="delete" href="">Eliminar</a>
             </div>
         </div>
