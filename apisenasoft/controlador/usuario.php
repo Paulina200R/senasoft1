@@ -16,8 +16,8 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
         http_response_code(200);
     }else{  
     if(isset($_GET['idUsuario'])){
-        $idproducto = $_GET['idUsuario'];
-        $datosProducto= $_Usuarios->obtenerUsuarios($idUsuario);
+        $idUsuario = $_GET['idUsuario'];
+        $datosProducto= $_usuario->obtenerUsuarios($idUsuario);
         header("Content-Type: application/json");
         echo json_encode($datosProducto);
         http_response_code(200);
@@ -52,10 +52,23 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 }
 
 if($_SERVER['REQUEST_METHOD'] == "PUT"){
+
+    $postBody = json_encode(array(  
+        "texto1" => $_POST["texto1"],
+        "texto2" =>  $_POST["texto2"],
+        "texto3" => $_POST["texto3"],
+        "texto4" =>  $_POST["texto4"],
+        "texto5" => $_POST["texto5"],
+        "texto6" =>  $_POST["texto6"],
+        "texto7" => $_POST["texto7"],
+        "texto8" => $_POST["texto8"],
+        "texto8" => $_POST["texto9"]
+      
+    ));
       //recibimos los datos enviados
-      $postBody = file_get_contents("php://input");
+ 
       //enviamos datos al manejador
-      $datosArray = $_pacientes->put($postBody);
+      $datosArray = $_usuario->put($postBody);
         //delvovemos una respuesta 
      header('Content-Type: application/json');
      if(isset($datosArray["result"]["error_id"])){

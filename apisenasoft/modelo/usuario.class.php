@@ -35,7 +35,7 @@ class usuario extends conexion {
     }
 
     public function obtenerUsuarios($id){
-        $query = "SELECT * FROM " . $this->table . " WHERE idUsuario = '$idUsuario'";
+        $query = "SELECT * FROM " . $this->table . " WHERE idUsuario = '$idUsuario    '";
         return parent::obtenerDatos($query);
 
     }
@@ -180,20 +180,46 @@ class usuario extends conexion {
            // $this->token = $datos['token'];
            // $arrayToken =   $this->buscarToken();
             //if($arrayToken){
-                if(!isset($datos['texto1'])){
+                if(!isset($datos['idUsuario'])){
                     return $_respuestas->error_400();
                 }else{
-                    $this->pacienteid = $datos['texto1'];
-                    if(isset($datos['texto2'])) { $this->Usuario = $datos['texto2']; }
+                    $this->idUsuario = $datos['idUsuario'];
+                    if(isset($datos['texto1'])) { 
+                        $this->nombres = $datos['texto1']; 
+                    }
+                    if(isset($datos['texto2'])) { 
+                        $this->apellidos = $datos['texto2']; 
+                    }
+                    if(isset($datos['texto3'])) { 
+                        $this->documento = $datos['texto3']; 
+                    }
+                    if(isset($datos['texto4'])) { 
+                        $this->telefono = $datos['texto4']; 
+                    }
+                    if(isset($datos['texto5'])) { 
+                        $this->correo = $datos['texto5']; 
+                    }
+                    if(isset($datos['texto6'])) { 
+                        $this->ciudad = $datos['texto6']; 
+                    }
+                    if(isset($datos['texto7'])) { 
+                        $this->direccion = $datos['texto7']; 
+                    }
+                    if(isset($datos['texto8'])) { 
+                        $this->ocupacion = $datos['texto8']; 
+                    }
+
                     
         
                     $resp = $this->modificarUsuario();
                     if($resp){
                         $respuesta = $_respuestas->response;
                         $respuesta["result"] = array(
-                            "texto1" => $this->idUsuario
+                            "idUsuario" => $this->idUsuario
                         );
                         return $respuesta;
+                        header('Location: ../../senasoft/vista/login.php');
+                        exit();
                     }else{
                         return $_respuestas->error_500();
                     }
@@ -209,7 +235,7 @@ class usuario extends conexion {
 
 
     private function modificarUsuario(){
-        $query = "UPDATE " . $this->table . " SET Usuario ='" . $this->Usuario . "'"; 
+        $query = "UPDATE " . $this->table . " SET tipoDocumento ='" . $this->tipoDocumento . "',documento = '" . $this->documento . "',nombres = '" . $this->nombres . "',apellidos = '" . $this->apellidos . "',telefono = '" . $this->telefono . "',correo = '" . $this->correo . "',contrasena = '" . $this->contrasena . "',ciudad = '" . $this->ciudad . "',direccion = '" . $this->direccion . "',ocupacion = '" . $this->ocupacion . "',rol = '" . $this->rol . "',estado = '" . $this->estado . "'  WHERE idUsuario = '" . $this->idUsuario . "'"; 
         $resp = parent::nonQuery($query);
         if($resp >= 1){
              return $resp;
@@ -217,6 +243,7 @@ class usuario extends conexion {
             return 0;
         }
     }
+   
 
 
     public function delete($json){

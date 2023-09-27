@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/styleMenuU.css">
+    <link rel="stylesheet" href="./css/styleMenuu.css">
 </head>
 <body>
    
@@ -31,12 +31,19 @@
                     <li class="cajas">
                         <span>Editar Cuenta</span>
                     </li>
+                    <a href="login.php">
                     <li class="cajas">
                         <span>Eliminar Cuenta</span>
                     </li>
+                    </a>
+                    
+                    <a href="login.php"> 
                     <li class="cajas">
                         <span>Cerrar Sesion</span>
                     </li>
+
+                    </a>
+                    
 
                 </ul>
 
@@ -87,6 +94,30 @@
 
         <!-- VENTANA EMERGENTE DEL AGENDAMIENTO ELIMINAR -->
 
+        <div class="agendamiento_eliminar">
+           <i class="fa fa-remove"></i>
+           <br>
+               <h1>Eliminar Cuenta</h1>
+           <table>
+           <th>lugar</th>
+            <tr>
+                <tr>manzana1</tr>
+            </tr>
+            <th>fecha</th>
+            <tr>
+                <tr>26-09-2023</tr>
+            </tr>
+            <th>hora</th>
+            <tr>
+                <tr>4am</tr>
+            </tr>
+
+           </table>
+                <input type="button" value="Eliminar" class="button">
+       
+            
+        </div>
+
 
 
 
@@ -122,35 +153,13 @@
             <input type="adress" class="adress" name="texto3">
             <span>Ocupacion:</span>
             <input type="text" class="email" name="texto3">
+
             <input type="button" value="Editar" class="button">
-            
     
         </div>
 
         
-        <div class="agendamiento_eliminar">
-           <i class="fa fa-remove"></i>
-           <br>
-               <h1>Eliminar Cuenta</h1>
-           <table>
-           <th>lugar</th>
-            <tr>
-                <tr>manzana1</tr>
-            </tr>
-            <th>fecha</th>
-            <tr>
-                <tr>26-09-2023</tr>
-            </tr>
-            <th>hora</th>
-            <tr>
-                <tr>4am</tr>
-            </tr>
-
-           </table>
-                <input type="button" value="Eliminar" class="button">
        
-            
-        </div>
             
         </div>
 
