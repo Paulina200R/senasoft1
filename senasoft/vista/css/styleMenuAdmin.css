@@ -35,7 +35,7 @@
 p{
     color: #F54C33;
     font-size: 25px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 /* Botones del menu */
@@ -81,14 +81,14 @@ img{
     background-color: #F4E5E4;
 }
 
-/* Título ventanas emergentes */
+/* Título ventanas de opciones */
 
 h1{
     color: #F54C33;
     margin-bottom: 30px;
 }
 
-/* Contenedores ventanas emergentes */
+/* Contenedores ventanas de opciones */
 .create-usuario,
 .create-usuario,
 .delete-usuario,
@@ -152,7 +152,7 @@ h1{
     border-radius: 30px;
 }
 
-/* Formularios ventanas emergentes */
+/* Formularios ventanas de opciones */
 
 .form-create,
 .form-delete,
