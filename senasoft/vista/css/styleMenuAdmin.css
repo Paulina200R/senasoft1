@@ -4,6 +4,8 @@
     font-family: 'Quicksand';
 }
 
+/* Contenedor de tarjetas */
+
 .content{
     width: calc(100% - 40px);
     height: calc(100vh - 90px);
@@ -14,6 +16,8 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
+
+/* Tarjetas */
 
 .opciones{
     width: 100%;
@@ -26,11 +30,15 @@
     border-radius: 30px;
 }
 
+/* Títulos tarjetas */
+
 p{
     color: #F54C33;
     font-size: 25px;
     margin-bottom: 10px;
 }
+
+/* Botones del menu */
 
 a{
     padding: 8px;
@@ -45,22 +53,146 @@ a:hover{
     transform: scale(1.1);
 }
 
+/* Iconos del menu */
+
 img{
     width: 130px;
     height: 130px;
 }
+
+/* Barra para botón de generar reporte */
 
 .barra{
     display: flex;
     width: 100%;
     justify-content: right;
     height: 50px;
-    background-color: #F4E5E4;
+    background-color: #F54C33;
 }
+
+/* Botoón para generar reporte */
 
 .report{
     width: 30%;
     height: 20px;
     margin-right: 20px;
     margin-top: 5px;
+    color: #EA2301;
+    background-color: #F4E5E4;
+}
+
+/* Título ventanas emergentes */
+
+h1{
+    color: #F54C33;
+    margin-bottom: 30px;
+}
+
+/* Contenedores ventanas emergentes */
+.create-manz,
+.delete-manz,
+.edit-manz,
+.edit2-est,
+.create-est,
+.delete-est,
+.edit-est,
+.edit2-cat,
+.create-cat,
+.delete-cat,
+.edit-cat,
+.edit2-ser,
+.create-ser,
+.delete-ser,
+.edit-ser,
+.edit2-mun,
+.create-mun,
+.delete-mun,
+.edit-mun{
+    visibility: hidden;
+}
+
+
+
+.edit2-manz,
+.create-manz,
+.delete-manz,
+.edit-manz,
+.edit2-est,
+.create-est,
+.delete-est,
+.edit-est,
+.edit2-cat,
+.create-cat,
+.delete-cat,
+.edit-cat,
+.edit2-ser,
+.create-ser,
+.delete-ser,
+.edit-ser,
+.edit2-mun,
+.create-mun,
+.delete-mun,
+.edit-mun{
+    position: absolute;
+    margin: 15% 40%;
+    width: 310px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4E5E4;
+    border-radius: 30px;
+}
+
+/* Formularios ventanas emergentes */
+
+.form-create,
+.form-delete,
+.form-edit{
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Inputs */
+
+.nombre{
+    text-align: center;
+    width: calc(100% - 20px);
+    height: 35px;
+    background-color: rgb(0,0,0,0);
+    border: none;
+    color: #251513;
+    border-bottom: 2px solid #F54C33;
+    transition: all 0.5s ease;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid #F54C33;
+    border-radius: 20px;
+}
+
+/* Botones */
+
+.btn-create,
+.btn-delete,
+.btn-edit{
+    width: 90%;
+    height: 35px;
+    color: #EA2301;
+    background-color: rgb(0,0,0,0);
+    border-radius: 15px;
+    border: 1.5px solid #EA2301;
+    transition: all 0.5s ease;
+}
+
+.btn-create:hover,
+.btn-delete:hover,
+.btn-edit:hover{
+    background-color: #EA2301;
+    color: #F4E5E4;
+    transform: scale(1.08);
 }
