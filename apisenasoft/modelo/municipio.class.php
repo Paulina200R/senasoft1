@@ -22,7 +22,7 @@ class municipio extends conexion
             $inicio = ($cantidad * ($pagina - 1)) +1 ;
             $cantidad = $cantidad * $pagina;
         }
-        $query = "SELECT idMunicipio, fecha, hora FROM " . $this->table . " limit $inicio,$cantidad";
+        $query = "SELECT idMunicipio, nombreMunicipio, cantManzanas FROM " . $this->table . " limit $inicio,$cantidad";
         $datos = parent::obtenerDatos($query);
         return ($datos);
     }
@@ -44,16 +44,12 @@ class municipio extends conexion
           //  $arrayToken =   $this->buscarToken();
             //if($arrayToken){
 
-                if(!isset($datos['nombreMunicipio']) || !isset($datos["cantManzanas"])  ){
+                if(!isset($datos['texto1']) || !isset($datos["texto2"])  ){
                     return $_respuestas->error_400();
                 }else{
-                    $this->nombreMunicipio = $datos['nombreMunicipio']; 
-                    $this->cantManzanas = $datos['cantManzanas']; 
-                  
-                  
-
+                    $this->nombreMunicipio = $datos['texto1']; 
+                    $this->cantManzanas = $datos['texto2']; 
                      $resp = $this->insertarMunicipio();
-
                      
                     if($resp){
                         $respuesta = $_respuestas->response;
@@ -77,7 +73,7 @@ class municipio extends conexion
     }
 
 
-    private function insertaMunicipio(){
+    private function insertarMunicipio(){
         $query = "INSERT INTO " . $this->table . " (idMunicipio, nombreMunicipio, cantManzanas)
         values
         ('" . $this->idMunicipio . "','" . $this->nombreMunicipio . "','" . $this->cantManzanas . "')"; 

@@ -3,7 +3,7 @@ require_once '../modelo/respuestas.class.php';
 require_once '../modelo/municipio.class.php';
 
 $_respuestas = new respuestas;
-$_municipio = new municicpio;
+$_municipio = new municipio;
 
 
 //metodo get buscar todo o por codigo
@@ -16,9 +16,9 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
         echo json_encode($listaAgendamiento);
         http_response_code(200);
     }else{  
-    if(isset($_GET['id'])){
-        $idMunicicpio = $_GET['id'];
-        $datosMunicipio= $_municipio->obtenerMunicipio($idMunicicpio);
+    if(isset($_GET['idMunicipio'])){
+        $idMunicicpio = $_GET['idMunicipio'];
+        $datosMunicipio= $_municipio->obtenerMunicipio($idMunicipio);
         header("Content-Type: application/json");
         echo json_encode($datosMunicipio);
         http_response_code(200);
@@ -28,12 +28,11 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
 // metodo post para guardar 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     //$postBody = $_POST["texto2"];
-    $postBody = array(  
+    $postBody = json_encode(array(  
         "texto1" => $_POST["texto1"],
-        "texto2" =>  $_POST["texto2"],
-        "texto3" =>  $_POST["texto3"]
+        "texto2" =>  $_POST["texto2"]
       
-    );
+    ));
     //recibimos los datos enviados
     //$postBody = file_get_contents("php://input");
     //enviamos los datos al controlador

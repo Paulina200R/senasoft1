@@ -28,13 +28,13 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
 // metodo post para guardar 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     //$postBody = $_POST["texto2"];
-    $postBody = array(  
+    $postBody = json_encode(array(  
         "texto1" => $_POST["texto1"],
         "texto2" =>  $_POST["texto2"],
         "texto3" =>  $_POST["texto3"],
         "texto4" =>  $_POST["texto4"],
         "texto5" =>  $_POST["texto5"]
-    );
+    ));
     //recibimos los datos enviados
     //$postBody = file_get_contents("php://input");
     //enviamos los datos al controlador

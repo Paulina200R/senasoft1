@@ -45,12 +45,12 @@ class servicio extends conexion
           //  $arrayToken =   $this->buscarToken();
             //if($arrayToken){
 
-                if(!isset($datos['idCategoria']) || !isset($datos["nombreServicio"]) || !isset($datos["descripcion"])  ){
+                if(!isset($datos['texto1']) || !isset($datos["texto2"]) || !isset($datos["texto3"])  ){
                     return $_respuestas->error_400();
                 }else{
-                    $this->idCategoria = $datos['idCategoria']; 
-                    $this->nombreServicio = $datos['nombreServicio']; 
-                    $this->descripcion = $datos['descripcion'];
+                    $this->idCategoria = $datos['texto1']; 
+                    $this->nombreServicio = $datos['texto2']; 
+                    $this->descripcion = $datos['texto3'];
             
                   
 

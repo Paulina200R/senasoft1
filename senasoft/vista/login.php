@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $correo = $_POST["texto1"];
     $contrasena = $_POST["texto2"];
 
-    $api_url = 'http://localhost/Antioquia-CentrodelDisenoyManufacturadelCuero/apisenasoft/controlador/login.php';
+    $api_url = 'http://localhost/Antioquia-CDMC/apisenasoft/controlador/login.php';
     $data = array('texto1' => $correo, 'texto2' => $contrasena);
 
     $ch = curl_init($api_url);
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $direccion = $_POST["texto9"];
     $ocupacion = $_POST["texto10"];
 
-    $api_url = 'http://localhost/Antioquia-CentrodelDisenoyManufacturadelCuero/apisenasoft/controlador/usuario.php';
+    $api_url = 'http://localhost/Antioquia-CDMC/apisenasoft/controlador/usuario.php';
     $data = array('texto11' => $tipoDocumento, 'texto12' => $documento,'texto3' => $nombres, 'texto4' => $apellidos,'texto5' => $telefono, 'texto6' => $correo,'texto7' => $contrasena, 'texto8' => $ciudad,'texto9' => $direccion, 'texto10' => $ocupacion);
 
     $ch = curl_init($api_url);
@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             </div>
             <div class="login-reg">
                 <div id="login" class="login">
-                    <form class="form-login" action="http://localhost/Antioquia-CentrodelDisenoyManufacturadelCuero/apisenasoft/controlador/login.php" method="get">
+                    <form class="form-login" action="http://localhost/Antioquia-CDMC/apisenasoft/controlador/login.php" method="get">
                         <h1>Iniciar Sesión</h1>
                         <br><input type="text" name="texto1" class="inputs in-log" id="ipt-correo" placeholder="Ingrese su correo" required><br>
                         <br><input type="password" name="texto2" class="inputs in-log" id="ipt-contra" placeholder="Ingrese su contrasena" required>
@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     </form>
                 </div>
                 <div id="registro" class="registro">
-                    <form class="form-registro" action="http://localhost/Antioquia-CentrodelDisenoyManufacturadelCuero/apisenasoft/controlador/usuario.php" method="post">
+                    <form class="form-registro" action="http://localhost/Antioquia-CDMC/apisenasoft/controlador/usuario.php" method="post">
                         <h1>Registrarse</h1>
                         <div class="reg1">
                             <br><input type="text" name="texto11" class="inputs in-reg" id="ipt-nom" placeholder="Ingrese sus nombres" required><br>

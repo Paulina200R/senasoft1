@@ -1,3 +1,44 @@
+<?php
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, 'http://localhost/Antioquia-CDMC/apisenasoft/controlador/categoria.php?page=1');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+
+if(curl_errno($ch)){
+ echo curl_error($ch);
+}else{
+$datos = json_decode($response, true);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $idCategoria = $_POST["texto1"];
+    $nombreServicio = $_POST["texto2"];
+    $descripcion = $_POST["texto3"];
+
+    $api_url = 'http://localhost/Antioquia-CDMC/apisenasoft/controlador/servicio.php';
+    $data = array('texto1' => $idCategoria, 'texto2' => $nombreServicio, 'texto3' => $descripcion);
+
+    $ch = curl_init($api_url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+
+    $response = curl_exec($ch);
+    $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    // Verificar la respuesta de la API y realizar acciones en consecuencia
+    if ($http_status == 200) {
+        // Autenticación exitosa, redirigir o mostrar un mensaje de éxito
+        echo $http_status;
+        // header("Location: welcome.php");
+        // exit;
+    } else {
+        // Autenticación fallida, mostrar un mensaje de error
+        $error_message = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +56,11 @@
 <div class="create-ser">
         <form class="form-create" action="" method="post">
             <h1>Registrar</h1>
+            <select name="texto1" class="nombre" id="">
+            </select>
             <input class="nombre" type="text" name="texto1" placeholder="Ingrese el nombre del Servicio"><br>
-            <input class="nombre" type="text" name="texto2" placeholder="Ingrese la descripción"><br>
+            <input class="nombre" type="text" name="texto2" placeholder="Ingrese el nombre del Servicio"><br>
+            <input class="nombre" type="text" name="texto3" placeholder="Ingrese la descripción"><br>
             <br><input type="submit" class="btn-create" value="Registrar">
         </form>
     </div>

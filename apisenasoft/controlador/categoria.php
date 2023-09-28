@@ -16,8 +16,8 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
         echo json_encode($listaCategoria);
         http_response_code(200);
     }else{  
-    if(isset($_GET['id'])){
-        $idCategoria = $_GET['id'];
+    if(isset($_GET['idCategoria'])){
+        $idCategoria = $_GET['idCategoria'];
         $datosCategoria= $_categoria->obtenerCategoria($idCategoria);
         header("Content-Type: application/json");
         echo json_encode($datosCategoria);
@@ -28,11 +28,11 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
 // metodo post para guardar 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     //$postBody = $_POST["texto2"];
-    $postBody = array(  
+    $postBody = json_encode(array(  
         "texto1" => $_POST["texto1"],
         "texto2" =>  $_POST["texto2"]
        
-    );
+    ));
     //recibimos los datos enviados
     //$postBody = file_get_contents("php://input");
     //enviamos los datos al controlador

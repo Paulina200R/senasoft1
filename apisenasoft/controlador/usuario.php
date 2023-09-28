@@ -36,7 +36,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         "texto7" => $_POST["texto7"],
         "texto8" =>  $_POST["texto8"],
         "texto9" => $_POST["texto9"],
-        "texto10" =>  $_POST["texto10"]
+        "texto10" =>  $_POST["texto10"],
+        "texto13" => $_POST["texto13"]
+
     ));
     //enviamos los datos al controlador
     $datosArray = $_usuario->post($postBody);

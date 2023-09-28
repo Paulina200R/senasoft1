@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ocupacion = $_POST["texto10"];
     $rol = $_POST["texto13"];
 
-    $api_url = 'http://localhost/Antioquia-CentrodelDisenoyManufacturadelCuero/apisenasoft/controlador/usuario.php';
+    $api_url = 'http://localhost/Antioquia-CDMC/apisenasoft/controlador/usuario.php';
     $data = array('texto11' => $tipoDocumento, 'texto12' => $documento,'texto3' => $nombres, 'texto4' => $apellidos,'texto5' => $telefono, 'texto6' => $correo,'texto7' => $contrasena, 'texto8' => $ciudad,'texto9' => $direccion, 'texto10' => $ocupacion , 'texto13' => $rol);
 
     $ch = curl_init($api_url);
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body class="fondo">
 <div class="create-usuario cont-user">
-        <form class="form-create form-user" action="http://localhost/Antioquia-CentrodelDisenoyManufacturadelCuero/apisenasoft/controlador/usuario.php" method="post">
+        <form class="form-create form-user" action="http://localhost/Antioquia-CDMC/apisenasoft/controlador/usuario.php" method="post">
             <p>Registrar</p>
             <div class="reg1">
             <br><input type="text" name="texto11" class="inp-reg nombre" id="ipt-nom" placeholder="Ingrese los nombres" required><br>
