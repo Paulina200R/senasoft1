@@ -58,10 +58,10 @@ class usuario extends conexion {
                             if($esta == "Activo"){ //Si el estado es activo.
                                 //crear el token
                                 if($verRol == "Usuario"){
-                                    header('Location: http://localhost/Antioquia-CDMC/senasoft/vista/menuUsuario.php');//Si el estado es activo redirecciona al usuario a la pagina principal.
+                                    header('Location: ../../senasoft/vista/menuUsuario.php');//Si el estado es activo redirecciona al usuario a la pagina principal.
                                     exit();
                                 }else if($verRol == "Admin"){
-                                    header('Location: http://localhost/Antioquia-CDMC/senasoft/vista/menuAdmin.php');//Si el estado es activo redirecciona al usuario a la pagina principal.
+                                    header('Location: ../../senasoft/vista/menuAdmin.php');//Si el estado es activo redirecciona al usuario a la pagina principal.
                                     exit();
                                 }else{
                                     echo "Se ha ingresado un rol inadecuado";
@@ -125,9 +125,7 @@ class usuario extends conexion {
                 if(!isset($datos['texto11']) || !isset($datos['texto12']) || !isset($datos['texto3']) || !isset($datos['texto4']) || !isset($datos['texto5']) || !isset($datos['texto6']) || !isset($datos['texto7']) || !isset($datos['texto8']) || !isset($datos['texto9']) || !isset($datos['texto10'])){
                     return $_respuestas->error_400();
                 }else{
-                    if(!isset($datos['texto13'])){
-                        $this->rol = "Usuario";
-                    }else{
+                    if(isset($datos['texto13'])){
                     // se trae los datos de la vista Usuario
                     $this->nombres = $datos['texto11'];
                     $this->apellidos = $datos['texto12'];
@@ -151,15 +149,12 @@ class usuario extends conexion {
                     }
                 }
                 }
+                
 
            // }else{
               //  return $_respuestas->error_401("El Token que envio es invalido o ha caducado");
             //}
        // } cierre del sino para el token
-
-
-       
-
     }
 
 

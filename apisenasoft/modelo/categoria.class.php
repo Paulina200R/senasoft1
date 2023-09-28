@@ -27,7 +27,7 @@ class categoria extends conexion
         return ($datos);
     }
 
-    public function obtenerCategoria($id){
+    public function obtenerCategoria($idCategoria){
         $query = "SELECT * FROM " . $this->table . " WHERE idCategoria = '$idCategoria'";
         return parent::obtenerDatos($query);
 
